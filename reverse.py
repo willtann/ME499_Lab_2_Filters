@@ -4,28 +4,28 @@ import random
 
 
 def reverse_i(r1):
-    # make an empty list the same length as input list
-    i = 0
-    l = len(r1)
-    length = l - 1
-    r2 = r1.copy()
-    print('r1(length)...', r1[length])
-    print('length...', length)
-    print('r2(i)...', r2[i])
-    print('i...', i)
+    r2 = []  # make an empty list
+    l = len(r1) - 1  #
     for i in range(len(r1)):
-        r2[i] = r1[-length]
-        i += 1
-        length()
-        return r2
+        r2.append(r1[l - i])
+    return r2
 
 
 def reverse_r(r1):
-    r2 = []
-    if len(r1) > 1:
-        r2[len(r1-1)]
-        print(r2)
+    r2 = r1.copy()  # Making a copy of list 'A' so we don't alter it
+
+    def nested_write(r2):  # nested function
+        if r2:
+            r1.pop(0)  # call last element
+            r3.append(nested_write(r1[1:]))  # writes element and doesn't erase that element
+
+    print(r2)
+
 
 if __name__ == "__main__":
-    r1 = [1, 2, 3, 4, 5]
+    r1 = [1, 2, 3, 4, 5, 6, 7, 8, 'yes']
+
     print(reverse_i(r1))
+    print(reverse_r(r1))
+
+
