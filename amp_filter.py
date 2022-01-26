@@ -16,3 +16,4 @@ def apply_amp_filter(data, cutoff=0.8):
     
     # Return the new list
     return filtered
+

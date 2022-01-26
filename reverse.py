@@ -15,9 +15,9 @@ def reverse_r(r1):
     r2 = r1.copy()  # Making a copy of list 'A' so we don't alter it
 
     def nested_write(r2):  # nested function
-        if r2 == :
+        if r2:
             r1.pop(0)  # call last element
-            r3.append(nested_write(r1[:]))  # writes element and doesn't erase that element
+            r2.append(nested_write(r1[:]))  # writes element and doesn't erase that element
 
     print(r2)
 
