@@ -8,7 +8,7 @@ def mean_filter(data, filter_width=3):  # default 3 if not specified
 
     if odd == 1 and filter_width > 0:  # odd and positive width
         # List with the averages (shorter than original)
-        m_filter = [filter_width] * (len(data) - (filter_width - 1))  # empty list of size
+        m_filter = [0] * (len(data) - (filter_width - 1))  # empty list of size
         print('New data length = ', len(m_filter))
         l_data = len(data)
 
@@ -29,10 +29,11 @@ def mean_filter(data, filter_width=3):  # default 3 if not specified
         return [x / y for x, y in zip(sum_calc[filter_width:], filter_divide)] # Zipping to operate on list
 
     else:
-        # print('No Bueno...Negative or ven filter width wont work ')
+        print('No Bueno...Negative or even filter width wont work ')
         return ValueError
 
 
 # if __name__ == "__main__":
 #     # print(mean_filter([1, 2, 3, 4, 5], 6))
 #     print(mean_filter([0, 2, 4, 8]))
+#     print(mean_filter([0, 2, 4, 8, 3], 5))
