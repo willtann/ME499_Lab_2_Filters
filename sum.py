@@ -26,7 +26,6 @@ if __name__ == "__main__":
     l1 = []
     # 100 examples testing against our custom factorial function
     for i in range(100):
-        l = random.randint(0, 15) # get random int each time
+        l = random.randint(0, 15)  # get random int each time
         l1.append(l)  # making a list
         assert sum_i(l1) == sum_r(l1)  # test each number in each function
-

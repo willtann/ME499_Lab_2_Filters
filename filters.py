@@ -26,7 +26,7 @@ def mean_filter(data, filter_width=3):  # default 3 if not specified
         # Making a list so we can divide all sums by the filter width
         filter_divide = [filter_width] * len(sum_calc[filter_width:])
         # Divide sum of index by filter width to find mean
-        return [x / y for x, y in zip(sum_calc[filter_width:], filter_divide)] # Zipping to operate on list
+        return [x / y for x, y in zip(sum_calc[filter_width:], filter_divide)]  # Zipping to operate on list
 
     else:
         print('No Bueno...Negative or even filter width wont work ')
