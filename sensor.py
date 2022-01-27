@@ -20,4 +20,3 @@ def generate_sensor_data(n, sigma=0.01):
 #     # Print out a few of the numbers
 #     for d in generate_sensor_data(10):
 #         print(d)
-
