@@ -21,6 +21,5 @@ if __name__ == "__main__":
 
     print(reverse_i(r1))
     print(reverse_r(r1))
-    xyz = 1
-    print(lambda xyz)
+
 
