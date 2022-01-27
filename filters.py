@@ -30,7 +30,7 @@ def mean_filter(data, filter_width=3):  # default 3 if not specified
 
     else:
         print('No Bueno...Negative or even filter width wont work ')
-        return ValueError
+        raise ValueError
 
 
 # if __name__ == "__main__":
