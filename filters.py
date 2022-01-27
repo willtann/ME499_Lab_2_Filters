@@ -21,10 +21,12 @@ def mean_filter(data, filter_width=3):  # default 3 if not specified
 
         sum_calc = sum_c(data)
         # Refining cumulative sum to filter_width
-        # zipping to avoid type discrepancies
+        # Zipping to operate on lists
         sum_calc[filter_width:] = [a - b for a, b in zip(sum_calc[filter_width:] , sum_calc[:-filter_width])]
+        # Making a list so we can divide all sums by the filter width
+        filter_divide = [filter_width] * len(sum_calc[filter_width:])
         # Divide sum of index by filter width to find mean
-        return sum_calc[filter_width - 1:] / filter_width
+        return [x / y for x, y in zip(sum_calc[filter_width:], filter_divide)] # Zipping to operate on list
 
     else:
         # print('No Bueno...Negative or ven filter width wont work ')
@@ -32,4 +34,5 @@ def mean_filter(data, filter_width=3):  # default 3 if not specified
 
 
 if __name__ == "__main__":
-    print(mean_filter([1, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 1], 3))
+    print(mean_filter([1, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 1]))
+
