@@ -12,17 +12,12 @@ def reverse_i(r):
 
 
 def reverse_r(r2):
-
-
-
-def reverse_r2222(r2):
     list = lambda r2: (list(r2[1:]) + r2[:1] if r2 else [])
     return list(r2)
 
 
-if __name__ == "__main__":
-    r = [1, 2, 3, 4, 5, 6, 7, 8, 'yes']
-
-    print(reverse_i(r))
-    print(reverse_r(r))
-    print(reverse_r2222(r))
+# if __name__ == "__main__":
+#     r = [1, 2, 3, 4, 5, 6, 7, 8, 'yes']
+#
+#     print(reverse_i(r))
+#     print(reverse_r(r))

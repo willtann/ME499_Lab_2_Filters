@@ -14,6 +14,3 @@ def write_to_csv(data_length):
     with open('test_filter.csv', 'w') as f:
         writer = csv.writer(f)
         writer.writerows(zip(data, filtered))
-
-
-
