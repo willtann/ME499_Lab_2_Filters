@@ -7,20 +7,13 @@ from sensor import generate_sensor_data
 def write_to_csv(data_length):
     data = generate_sensor_data(data_length)
     filtered = apply_amp_filter(data)
+    print('-----')
+    print(filtered)
+    print('-----')
+    print(data)
     with open('test_filter.csv', 'w') as f:
         writer = csv.writer(f)
-        for val in data:
-            writer.writerows(zip(data))
-
-            # writer.writerows([data])
-    # print(data)
-    #
-    # with open('test_filter.csv') as file:
-    #     for i in range(data_length):
-    #         writer = csv.writer(file)
-    #         writer.writerow(data[:1])
-    #         writer.writerow(filtered[:2])
-    return
+        writer.writerows(zip(data, filtered))
 
 
-print(write_to_csv(10))
+
