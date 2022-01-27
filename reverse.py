@@ -12,14 +12,8 @@ def reverse_i(r1):
 
 
 def reverse_r(r1):
-    r2 = r1.copy()  # Making a copy of list 'A' so we don't alter it
-
-    def nested_write(r2):  # nested function
-        if r2:
-            r1.pop(0)  # call last element
-            r2.append(nested_write(r1[:]))  # writes element and doesn't erase that element
-
-    print(r2)
+    reverse = lambda r1: (reverse(r1[1:]) + r1[:1] if r1 else [])
+    return reverse(r1)
 
 
 if __name__ == "__main__":
@@ -27,5 +21,6 @@ if __name__ == "__main__":
 
     print(reverse_i(r1))
     print(reverse_r(r1))
-
+    xyz = 1
+    print(lambda xyz)
 

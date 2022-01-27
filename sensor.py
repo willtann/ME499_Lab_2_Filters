@@ -16,7 +16,9 @@ def generate_sensor_data(n, sigma=0.01):
     return data
 
 
-if __name__ == '__main__':
-    # Print out a few of the numbers
-    for d in generate_sensor_data(10):
-        print(d)
+# if __name__ == '__main__':
+#     # Print out a few of the numbers
+#     for d in generate_sensor_data(10):
+#         print(d)
+
+print(generate_sensor_data(10))
