@@ -1,6 +1,4 @@
 #! /Users/tannerwilliams/Desktop/ME 499/ME499_Lab_2_Filters
-import math
-import random
 
 
 def reverse_i(r):
@@ -11,9 +9,11 @@ def reverse_i(r):
     return r1
 
 
-def reverse_r(r2):
-    list = lambda r2: (list(r2[1:]) + r2[:1] if r2 else [])
-    return list(r2)
+def reverse_r(r):
+    if r:
+        return [r.pop()] + reverse_r(r)
+    else:
+        return []
 
 
 # if __name__ == "__main__":
